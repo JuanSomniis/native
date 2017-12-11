@@ -1,0 +1,26 @@
+<div fxLayout='row' fxLayoutAlign='center center'>
+  <div fxFlex='40' fxFlex.sm='60' fxFlex.xs='100'>
+    <mat-card>
+      <form (ngSubmit)="log()" fxLayout='column'>
+        <div fxFlex>
+          <h1>NATIVA</h1>
+        </div>
+        <!-- Email-->
+        <mat-form-field fxFlex>
+          <input matInput placeholder="Dirección de correo electónico" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <!-- Password -->
+        <mat-form-field fxFlex>
+          <input matInput type='password' placeholder="Contraseña" [formControl]="pass" required>
+          <mat-error *ngIf="pass.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <div fxFlex>
+          <button class='mat-primary' mat-raised-button type="submit">Login</button>
+          <button class='mat-primary' (click)='gem()' mat-raised-button type="button">gem</button>
+          <button class='mat-primary' (click)='google()' mat-raised-button type="button">google</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

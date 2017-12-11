@@ -1,0 +1,84 @@
+<div fxLayout="column">
+  <mat-toolbar fxFlex>
+    <!-- -->
+    <mat-toolbar-row class="topHeader" fxLayout='row'>
+      <div fxFlex='85' fxFlex.sm='80' fxFlex.xs='40'>
+        <p>
+          <img src="./assets/ws.svg" alt="" width="15" style="vertical-align:middle"> 319 705 35 13</p>
+      </div>
+      <div fxFlex='15' fxFlex.sm='20' fxFlex.xs='60' fxLayout='row' fxLayoutAlign='end center'>
+        <p fxFlex>
+          <a mat-button>Ingresar</a>
+        </p>
+        <p fxFlex>
+          <a mat-button>Registrarse</a>
+        </p>
+      </div>
+    </mat-toolbar-row>
+    <!-- -->
+    <mat-toolbar-row fxLayout='row'>
+      <span fxFlex='10'>NATIVA</span>
+      <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+      <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+      <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+      <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <section fxFlex>
+    <app-banner></app-banner>
+  </section>
+  <router-outlet>
+  </router-outlet>
+  <footer>
+    <!--<button mat-button class="mat-primary" mat-raised-button>gh</button>
+  <button mat-button class="mat-accent" mat-raised-button>fg</button>-->
+  </footer>
+
+  <mat-menu #animals="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+  </mat-menu>
+
+  <mat-menu #vertebrates="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+    <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+    <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+    <button mat-menu-item>Birds</button>
+    <button mat-menu-item>Mammals</button>
+  </mat-menu>
+
+  <mat-menu #invertebrates="matMenu">
+    <button mat-menu-item>Insects</button>
+    <button mat-menu-item>Molluscs</button>
+    <button mat-menu-item>Crustaceans</button>
+    <button mat-menu-item>Corals</button>
+    <button mat-menu-item>Arachnids</button>
+    <button mat-menu-item>Velvet worms</button>
+    <button mat-menu-item>Horseshoe crabs</button>
+  </mat-menu>
+
+  <mat-menu #fish="matMenu">
+    <button mat-menu-item>Baikal oilfish</button>
+    <button mat-menu-item>Bala shark</button>
+    <button mat-menu-item>Ballan wrasse</button>
+    <button mat-menu-item>Bamboo shark</button>
+    <button mat-menu-item>Banded killifish</button>
+  </mat-menu>
+
+  <mat-menu #amphibians="matMenu">
+    <button mat-menu-item>Sonoran desert toad</button>
+    <button mat-menu-item>Western toad</button>
+    <button mat-menu-item>Arroyo toad</button>
+    <button mat-menu-item>Yosemite toad</button>
+  </mat-menu>
+
+  <mat-menu #reptiles="matMenu">
+    <button mat-menu-item>Banded Day Gecko</button>
+    <button mat-menu-item>Banded Gila Monster</button>
+    <button mat-menu-item>Black Tree Monitor</button>
+    <button mat-menu-item>Blue Spiny Lizard</button>
+    <button mat-menu-item disabled>Velociraptor</button>
+  </mat-menu>
