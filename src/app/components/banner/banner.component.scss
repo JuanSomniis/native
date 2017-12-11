@@ -4,14 +4,16 @@
 
 /* Slideshow container */
 .slideshow-container {
-  min-width: 1000px;
-  min-height: 529px;
-  max-width: 1000px;
-  max-height: 529px;
+  width: 100%;
+  max-height: 611.141px;
   position: relative;
   margin: auto;
 
   /*1000 = x  ||  529 = y  */
+  img {
+    width: 100%;
+    max-height: 611.141px;
+  }
 }
 
 /* Hide the images by default */

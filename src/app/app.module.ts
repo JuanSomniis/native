@@ -8,8 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //#endregion external
 //#region modules
-import { TreeModule } from './modules/tree.module'
-import { MaterialModule } from './modules/material.module'
+import { TreeModule } from './modules/tree.module';
+import { MaterialModule } from './modules/material.module';
 //#endregion modules
 //#region components
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { Banner } from './components/banner/banner.service';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { Banner } from './components/banner/banner.service';
     AppComponent,
     MainComponent,
     LoginComponent,
-    BannerComponent
+    BannerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
