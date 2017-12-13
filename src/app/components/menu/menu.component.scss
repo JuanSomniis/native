@@ -1,0 +1,39 @@
+
+.topHeader {
+  height: 40px;
+  background-color: #424242;
+  color: #bdbdbd;
+  overflow: hidden;
+  p, a {
+    font-size: 14px;
+  }
+}
+
+mat-icon {
+  color: #424242
+}
+
+
+/* unvisited link */
+a:link {
+  color: #bdbdbd;
+}
+
+/* visited link */
+a:visited {
+  color: #bdbdbd;
+}
+
+/* mouse over link */
+a:hover {
+  color: whitesmoke;
+}
+
+/* selected link */
+a:active {
+  color: whitesmoke;
+}
+
+.brand {
+  color: #4A148C;
+}

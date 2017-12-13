@@ -1,0 +1,26 @@
+p.mxm-or-signin {
+  text-align: center;
+  color: #a2abb8;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  margin: 20px 0;
+}
+
+p.mxm-or-signin::before{
+  content: "";
+  height: 1px;
+  background-color: #ecf0f1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+p.mxm-or-signin span {
+  background: #fff;
+  position: relative;
+  padding: 0 10px;
+}

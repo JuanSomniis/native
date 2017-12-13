@@ -11,7 +11,7 @@
 
   /*1000 = x  ||  529 = y  */
   img {
-    width: 100%;
+    width: inherit;
     max-height: 611.141px;
   }
 }
@@ -89,6 +89,7 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  
 }
 
 @-webkit-keyframes fade {
@@ -97,8 +98,14 @@
 }
 
 @keyframes fade {
-  from {opacity: 0.5} 
-  to {opacity: 1}
+  from {
+    opacity: 0.5;
+    //transform: translateX(5px)
+  } 
+  to {
+    opacity: 1;
+
+  }
 }
 
 /*1000 = x  ||  529 = y  */

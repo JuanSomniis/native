@@ -11,7 +11,8 @@ import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  host: { class: 'flexComponent'}
 })
 export class LoginComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);

@@ -1,1 +1,9 @@
-<app-banner></app-banner>
+<div fxLayout='column'>
+  <app-banner fxFlex></app-banner>
+
+  <div  fxLayout='row' fxLayoutWrap fxLayoutAlign="space-between center">
+
+    <app-producto *ngFor='let prod of productos' fxFlex='30'></app-producto>
+
+  </div>
+</div>
