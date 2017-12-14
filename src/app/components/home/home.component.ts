@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   productos: Array<any> = [];
   constructor() { 
-    this.productos = [1,2,3,4,5,6];
+    this.productos = [1,2,3,4,5,6,7,8];
   }
 
   ngOnInit() {

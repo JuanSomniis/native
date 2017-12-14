@@ -10,6 +10,7 @@ import { environment } from './../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { NgxCarouselModule } from 'ngx-carousel';
 //#endregion external
 //#region modules
 import { TreeModule } from './modules/tree.module';
@@ -52,6 +53,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgxCarouselModule
   ],
   providers: [Banner],
   bootstrap: [AppComponent]

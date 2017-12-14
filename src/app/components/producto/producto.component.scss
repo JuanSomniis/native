@@ -1,0 +1,18 @@
+.titleProducto {
+  font-size: 17px;
+}
+
+.cardProducto:hover {
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+.cardProducto {
+  -webkit-transition: 0.5s cubic-bezier(0.02, 1.08, 1, 1.01);
+  -moz-transition: 0.5s cubic-bezier(0.02, 1.08, 1, 1.01);
+  -o-transition: 0.5s cubic-bezier(0.02, 1.08, 1, 1.01);
+  transition: 0.5s cubic-bezier(0.02, 1.08, 1, 1.01);
+  cursor: pointer;
+}
