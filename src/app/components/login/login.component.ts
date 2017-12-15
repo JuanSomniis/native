@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-
 
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
@@ -11,35 +10,20 @@ import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  host: { class: 'flexComponent'}
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  @HostBinding('class') flexComponent = 'flexComponent';
   email = new FormControl('', [Validators.required, Validators.email]);
   pass = new FormControl('', [Validators.required]);
-  //coursesObservable: Observable<any[]>;
-
-  //itemRef: AngularFireObject<any>;
-  //items: FirebaseObjectObservable<any>;
   items: Observable<any>;
 
   constructor(
     private db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
     public toast: MatSnackBar) {
-      this.items = db.list('Usuarios').valueChanges();
-
-    //const relative = db.object('Usuarios').valueChanges();
-    //this.items = db.object('Usuarios/0');
-    //this.item = this.itemRef.valueChanges();
-    //this.items = db.list('Usuarios').valueChanges();
-
-
-    //this.coursesObservable = this.db.list('/Usuarios').valueChanges();
-    //this.items.subscribe(res => console.log(res));
+    this.items = db.list('Usuarios').valueChanges();
   }
-
-
 
   getErrorMessage() {
     return this.email.hasError('required') ? 'You must enter a value' :
@@ -51,19 +35,19 @@ export class LoginComponent implements OnInit {
 
   }
 
-  google(){
+  google() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-      .then(res=>{
+      .then(res => {
         console.log(res)
-      }).catch(err=> {
+      }).catch(err => {
         console.log(err);
       });
   }
 
-  gem(){
-    console.log(this.items)
+  gem() {
+    console.log(this.items);
     //this.afAuth.auth.signOut();
-    this.items.subscribe(res=>{
+    this.items.subscribe(res => {
       console.log(res);
     });
   }

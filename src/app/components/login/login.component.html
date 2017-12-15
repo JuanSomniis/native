@@ -1,11 +1,23 @@
 <div fxLayout='row' fxLayoutAlign='center center'>
-  <mat-card fxFlex='40' fxFlex.sm='60' fxFlex.xs='100'>
+  <mat-card fxFlex='40' fxFlex.sm='60' fxFlex.xs='100' fxFlex.lg='30'>
 
     <form (ngSubmit)="log()" fxLayout='column'>
-      <button class='mat-primary' (click)='gem()' mat-raised-button type="button">Facebook</button>
-      <br>
-      <button class='mat-primary' (click)='google()' mat-raised-button type="button">Google</button>
-      <p class="mxm-or-signin"><span>o</span></p>
+
+      <div fxLayout='row'>
+        <div fxFlex>
+          <button fxFlex class='mat-primary' (click)='gem()' mat-raised-button type="button">Facebook</button>
+        </div>
+        <div fxFlex='1'>
+        </div>
+        <div fxFlex>
+          <button fxFlex class='mat-primary' (click)='google()' mat-raised-button type="button">Google</button>
+        </div>
+      </div>
+
+      <p class="mxm-or-signin">
+        <span>o</span>
+      </p>
+
       <!-- Email-->
       <mat-form-field fxFlex>
         <input matInput placeholder="Dirección de correo electónico" [formControl]="email" required>
@@ -13,11 +25,22 @@
       </mat-form-field>
       <br>
       <!-- Password -->
-      <mat-form-field fxFlex>
+      <mat-form-field fxFlex > 
         <input matInput type='password' placeholder="Contraseña" [formControl]="pass" required>
         <mat-error *ngIf="pass.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
-      <button class='mat-primary' mat-raised-button type="submit">Inisiar sesión</button>
+      <!-- Contraseña olvidada -->
+      <div fxFlex  class="passForg">
+        <a class="mat-subhead" href='#/login'>
+            ¿Olvidaste la contraseña?
+        </a>
+      </div>
+      <br>
+      
+
+
+      <button class='mat-primary' mat-raised-button type="submit">Iniciar sesión</button>
+      <button *ngIf='false' class='mat-primary' mat-raised-button type="submit">Registrarse</button>
     </form>
   </mat-card>
 </div>

@@ -25,7 +25,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductoComponent } from './components/producto/producto.component';
 //#endregion components
-//#region providers 
+//#region providers
 import { Banner } from './components/banner/banner.service';
 import { FooterComponent } from './components/footer/footer.component';
 //#endregion providers
